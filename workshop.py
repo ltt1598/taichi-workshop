@@ -16,7 +16,7 @@ dt = 1e-4   # time-step size
 # Nx2 vectors
 pos = ti.Vector.field(2, ti.f32, N)
 vel = ti.Vector.field(2, ti.f32, N)
-#TODO define the force for the particles.
+#TODO1 define the force for the particles.
 
 @ti.kernel
 def initialize():   # initialize the particles on a torus: r1=0.2, r2=0.4
@@ -35,19 +35,19 @@ def compute_force():
     # clear force
     for i in range(N):
         ...
-        #TODO: set the force of particle i to zero
+        #TODO2: set the force of particle i to zero
 
     # compute gravitational force
     for i in range(N):
         ...
-        #TODO: compute the gravitational force for all particles
+        #TODO2: compute the gravitational force for all particles
 
 @ti.kernel
 def update():     #symplectic euler integration
     for i in range(N):     
-        ...
-        #TODO: update velocity using acceleration
-        #TODO: update position using velocity
+        pos[i] += vel[i]*dt
+        #TODO1: update velocity using acceleration
+        #TODO1: update position using velocity
 
 if __name__ == "__main__":
 
