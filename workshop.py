@@ -45,7 +45,7 @@ def compute_force():
 @ti.kernel
 def update():     #symplectic euler integration
     for i in range(N):     
-        pos[i] += vel[i]*dt
+        ...
         #TODO1: update velocity using acceleration
         #TODO1: update position using velocity
 
