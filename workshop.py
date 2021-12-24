@@ -27,7 +27,7 @@ def initialize():   # initialize the particles on a torus: r1=0.2, r2=0.4
         # LOOKAT: offset is initialized using a random radian theta
         offset = r * ti.Vector([ti.cos(theta), ti.sin(theta)])
         pos[i] = center+offset
-        # LOOKAT: velocity in intialized to the tangent direction
+        # LOOKAT: velocity is initialized to the tangent direction
         vel[i] = ti.Vector([-offset.y, offset.x]) * v0
 
 @ti.kernel          # compute the force for each particle
