@@ -9,5 +9,5 @@ python fractal.py
 
 N-body.py is the starter script for the workshop. You can run it by 
 ```
-python workshop.py.
+python workshop.py
 ```
