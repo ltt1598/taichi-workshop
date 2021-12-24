@@ -62,6 +62,7 @@ if __name__ == "__main__":
                 exit()
             elif e.key == ti.GUI.SPACE:
                 paused = not paused
+                print("paused =", paused)
             elif e.key == 'r':
                 initialize()
 
